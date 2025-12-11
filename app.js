@@ -20,4 +20,19 @@ app.get("/", (req, res, next) => {
   next();
 });
 
+app.get("/elie", (req, res, next) => {
+  res.setHeader("Content-type", "text/html");
+  res.send(`
+    <html>
+      <head>
+        <title>Node Js Web Server</title>
+      </head>
+    </html>
+    <body>
+      <h1>Hello Elie! You started to get used to cloud congrats 👏...</h1>
+    </body>
+    `);
+  next();
+});
+
 module.exports = app;
